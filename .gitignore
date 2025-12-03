@@ -1,0 +1,7 @@
+echo "venv/
+__pycache__/
+*.pyc
+.DS_Store
+quests.db
+gamification_state.json
+parchments/" > .gitignore

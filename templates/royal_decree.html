@@ -1,0 +1,55 @@
+<!-- templates/royal_decree.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background: url('https://www.transparenttextures.com/patterns/parchment.png'), #f4e4bc;
+            font-family: "Times New Roman", serif;
+            padding: 40px;
+            color: #5a3921;
+            line-height: 1.6;
+        }
+        .decree {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border: 3px double #8B4513;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8B0000;
+            margin-bottom: 30px;
+        }
+        .seal {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #8B4513;
+        }
+        .date {
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="decree">
+        <h1>Королевский указ №{{ quest.id }}</h1>
+        <p><strong>Название квеста:</strong> {{ quest.title }}</p>
+        <p><strong>Сложность:</strong> {{ quest.difficulty }}</p>
+        <p><strong>Награда:</strong> {{ quest.reward }} золотых</p>
+        <p><strong>Описание:</strong> {{ quest.description }}</p>
+        <p><strong>Срок выполнения:</strong> {{ quest.deadline }}</p>
+        <div class="date">Дата выдачи: {{ current_date }}</div>
+        <div class="seal">Печать Его Величества</div>
+    </div>
+</body>
+</html>

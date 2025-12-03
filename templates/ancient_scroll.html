@@ -1,0 +1,51 @@
+<!-- templates/ancient_scroll.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background: #2c1b0f url('https://www.transparenttextures.com/patterns/old-paper.png');
+            color: #e8d8a6;
+            font-family: "Georgia", serif;
+            padding: 50px 80px;
+            line-height: 1.7;
+        }
+        .scroll {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(44, 27, 15, 0.7);
+            padding: 30px;
+            border-left: 10px solid #8B4513;
+            border-right: 10px solid #8B4513;
+        }
+        h1 {
+            text-align: center;
+            font-size: 26px;
+            text-shadow: 0 0 8px #000;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        p {
+            text-indent: 20px;
+        }
+        .runes {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 24px;
+            color: #b09050;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll">
+        <h1>Свиток древнего квеста #{{ quest.id }}</h1>
+        <p><strong>Имя испытания:</strong> {{ quest.title }}</p>
+        <p><strong>Степень опасности:</strong> {{ quest.difficulty }}</p>
+        <p><strong>Дар провидца:</strong> {{ quest.reward }} золотых монет</p>
+        <p><strong>Завет:</strong> {{ quest.description }}</p>
+        <p><strong>Предел времени:</strong> {{ quest.deadline }}</p>
+        <div class="runes">✧ ᛉ ᚠ ᛏ ᛟ ᚱ ᚷ ✧</div>
+    </div>
+</body>
+</html>

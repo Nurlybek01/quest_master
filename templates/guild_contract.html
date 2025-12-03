@@ -1,0 +1,51 @@
+<!-- templates/guild_contract.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background: #f4e4bc;
+            font-family: "Uncial Antiqua", serif;
+            padding: 30px;
+            color: #3a2615;
+        }
+        .contract {
+            max-width: 750px;
+            margin: 0 auto;
+            border: 2px solid #8B0000;
+            padding: 25px;
+            background: rgba(253, 245, 230, 0.9);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #8B0000;
+            margin-bottom: 25px;
+        }
+        .seal {
+            width: 100px;
+            height: 100px;
+            border: 5px solid #8B0000;
+            margin: 20px auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #8B0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="contract">
+        <h1>Контракт Гильдии пергаментов и заклинаний #{{ quest.id }}</h1>
+        <p><strong>Название:</strong> {{ quest.title }}</p>
+        <p><strong>Сложность:</strong> {{ quest.difficulty }}</p>
+        <p><strong>Вознаграждение:</strong> {{ quest.reward }} золотых</p>
+        <p><strong>Описание:</strong> {{ quest.description }}</p>
+        <p><strong>Срок выполнения:</strong> {{ quest.deadline }}</p>
+        <div class="seal">ПЕЧАТЬ</div>
+    </div>
+</body>
+</html>
